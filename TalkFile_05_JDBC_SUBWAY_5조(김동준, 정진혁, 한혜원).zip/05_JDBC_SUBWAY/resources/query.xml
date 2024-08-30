@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 회원 추가용 쿼리문 -->
+	<entry key="insertSubway">
+		INSERT INTO SUBWAY
+					VALUES(SEQ_SUBNO.NEXTVAL
+						 , ?
+						 , ?
+						 , ?
+						 , ?
+						 , ?
+						 , ?
+						 , ?)
+	</entry>
+	<!-- 회원 전체 조회용 쿼리문 -->
+	<entry key="selectAll">
+		SELECT * 
+		  FROM SUBWAY
+	</entry>
+	<!-- 급행차량 검색  -->
+	<entry key="selectByExpress"> 
+		SELECT * FROM SUBWAY WHERE SUBNO = ? AND EXPRESS = 'Y' 
+	</entry>
+	<!-- 기관사명 검색 -->
+	<entry key="selectBySubName"> 
+		SELECT * FROM SUBWAY WHERE SUBNAME LIKE ? 
+	</entry>
+	<entry key = "updateSub">
+		UPDATE SUBWAY SET SUBNAME = ?, SUBFIRST = ?, SUBLAST = ?, SUBCOLOR = ? WHERE SUBLINE = ?
+	</entry>
+	<entry key = "deleteSubway">
+		DELETE FROM SUBWAY WHERE SUBNO = ?
+	</entry>
+	
+	<entry key = "selectBySubFix">
+		SELECT * FROM SUBWAY
+		WHERE EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM TO_DATE(SUBDATE, 'RRRR-MM-DD')) > 50
+		AND SUBLINE = ?
+		ORDER BY EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM TO_DATE(SUBDATE, 'RRRR-MM-DD')) DESC
+	</entry>
+</properties>
