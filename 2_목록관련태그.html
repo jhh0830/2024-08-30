@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>목록 관련 태그</title>
+
+    </head>
+
+    <body>
+
+        <!-- li : list 의 약자 -->
+
+        <li>목록 1</li>
+        <li>목록 2</li>
+
+        <hr>
+
+
+        <h1>ul : 순서 없는 목록 태그</h1>
+
+        <ul>
+            <li>
+                HTML
+                <ul>
+                    <!-- 목록 안에 목록을 넣을 수 있다. -->
+                     <li>글자관련</li>
+                     <li>목록관련</li>
+
+                </ul>
+            </li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+        </ul>
+        <!--
+            불릿 (bullet) 기호
+            순서 없는 목록 앞에 붙는 기호
+            채워진 원, 빈 원, 네모, .. 모양 변경 가능
+            (CSS 시간에 할 것)
+
+        -->
+
+        <hr>
+
+        <h1>ol : 순서 있는 목록 태그</h1>
+
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+        </ol>
+
+        <!-- 
+            순서가 있는 목록 태그는
+            기본적으로 1부터 시작하는 숫자값!!
+        -->
+
+        <br>
+
+        <!--
+            ol 태그의 type 속성을 이용해서 
+            모양 변경 가능
+            생략 시 기본값은 1
+            type="1/A/a/I/i" << 이렇게 종류가 존재함
+         -->
+            <ol type="i">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+
+            </ol>
+
+        <br>
+
+        <!--
+            ol 태그의 start 속성을 이용해서
+            시작수 변경 가능
+            start="시작수(숫자값)"
+            type 속성과 결합해서도 사용 가능
+        -->
+        <ol type="a" start="5">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+
+        </ol>
+        <!--
+            ol 태그의 reversed 속성을 이용해서
+            역순으로 표기 가능 (내림차순)
+            reversed=(속성값 제시 안함)
+        -->
+            <ol type="A" start="5" reversed>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ol>
+
+            <hr>
+
+            <h1>dl : 설명과 관련된 목록 태그</h1>
+            <dl>
+                <dt>첫번째 목록 제목</dt>
+                <dt>여기에 첫번째 목록에 대한 설명을 기술</dt>
+                <dd>여러 줄을 작성할 수 있다.</dd>
+
+                <dt>두번째 목록 제목</dt>
+                <dd>설명 또한 마찬가지</dd>
+
+
+            </dl>
+            <hr>
+
+            <!-- html 응용문제 2-->
+
+
+    </body>
+    <h3>자바(Java)학습내용</h3>
+    <h4>담당 강사 : 김가현</h4>
+    <p>이메일 : qhkim1121@iei.or.kr</p>
+    <hr>
+    <ul>
+        <li>프로그래밍언어
+            <ul>
+                <li><s>Java</s></li>
+        </ul>
+    </li>
+        <li>데이터 베이스</li>
+        <ul>
+            <li><s>Oracle</s></li>
+    </ul>
+        <li>Frontend
+            <ol>
+                <li><mark>HTML</mark></li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ol>
+        </li>
+        <li>서버개발기술
+            <ol type="i">
+                <li><s>JDBC</s></li>
+                <li>Servlet</li>
+                <li>JSP</li>
+                <li>AJAX</li>
+            </ol>
+        </li>
+        <li>프레임 워크
+            <ol type="a">
+                <li>MyBatis</li>
+                <li><b>Spring</b></li>
+            </ol>
+        </li>
+
+    </ul>
+    <hr>
+    <!-- 응용 문제-->
+     <h3>이번주 식단</h3>
+     <br><br>
+     <ul>
+        <li>월요일 식단
+            <ul>
+                <li><b>돈까스</b></li>
+                <li>참찌찌개</li>
+                <li><mark><em>계란말이</em></mark></li>
+                <li>김치</li>
+            </ul>
+        </li>
+        <li>화요일 식단
+            <ol type="1" start="5">
+                <li><b>닭다리튀김</b></li>
+                <li>김치찌개</li>
+                <li><u>오므라이스</u></li>
+                <li><s>냉면</s>-><mark>떡볶이</mark></li>
+            </ol>
+        </li>
+        <li>수요일 식단
+            <ol type="i">
+                <li><b><u>수제햄버거</u></b></li>
+                <li>우유</li>
+                <li><u>스프</u></li>
+                <li>단무지<sub><mark><u>2개</u></mark></sub></li>
+            </ol>
+            
+        </li>
+        <li>목요일 식단
+            <ol>
+                <li><b>삼겹살</b><sup><mark>특식</mark></sup></li>
+                <li>상추</li>
+                <li>부침개</li>
+                <li><i>무국</i></li>
+            </ol>
+        </li>
+        <li>금요일 식단
+            <ol type="a" reversed start="4">
+                <li><b><mark>치즈피자</mark></b></li>
+                <li><i>피클</i></li>
+                <li>콜라</li>
+                <li>스파게티</li>
+            </ol>
+        </li>
+     </ul>
+     <hr>
+
+     공부하지 않는 자 먹지도 말라<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <i><b>- 김가현 -</b></i><br>
+
+     <i>식단 출처 : kh 정보 교육원 (http://iei.or.kr)</i>
+</html>
